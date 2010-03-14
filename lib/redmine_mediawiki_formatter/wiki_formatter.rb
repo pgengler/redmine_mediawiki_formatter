@@ -12,10 +12,14 @@ module RedmineMediawikiFormatter
 
 
 	class RedmineMediaWikiLinkHandler < MediaWikiHTMLGenerator::MediaWikiLinkHandler
-		def url_for(resource)
-			Rails.logger.info "YOU ARE HERE"
-			Rails.logger.info resource.to_s
-			return resource
+		def link_for(prefix, resource, options=[])
+			if prefix == 'Image':
+				alt = '';
+				if options.length > 0:
+					alt = options[0];
+				end
+				return "<img src='#{resource}' alt='#{alt}' title='#{alt}' />"
+			end
 		end
 	end
 
