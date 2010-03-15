@@ -1,6 +1,12 @@
 require 'mediacloth'
- 
+
+
 module RedmineMediawikiFormatter
+	# This class overrides the normal interal link parser. Since Redmine
+	# provides its own way of handling internal links (coincidentally in
+	# the same format as for Mediawiki), the 'parse_internal_link'
+	# method simply returns a Mediawiki-style link instead of a parsed
+	# HTML one.
 	class RedmineMediaWikiHTMLGenerator < MediaWikiHTMLGenerator
 		def parse_internal_link(ast)
 			text = parse_wiki_ast(ast)
@@ -10,7 +16,12 @@ module RedmineMediawikiFormatter
 		end
 	end
 
-
+	# This class overrides the 'link_for' method of the
+	# MediaWikiHTMLGenerator's MediaWikiLinkHandler class. This method
+	# is used for parsing double-bracketed links that include a prefix.
+	# For example, [[Image:image_url]]. For now, this only handles
+	# Image: links (including 'alt' text), returning an HTML string
+	# with the <img> tag.
 	class RedmineMediaWikiLinkHandler < MediaWikiHTMLGenerator::MediaWikiLinkHandler
 		def link_for(prefix, resource, options=[])
 			if prefix == 'Image':
