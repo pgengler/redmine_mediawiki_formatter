@@ -14,6 +14,11 @@
 			table td h2 { font-size: 1.4em; text-align: left; }
 			table td h3 { font-size: 1.2em; text-align: left; }
 			img.tool { border: 1px solid #bbb; }
+			table#demo { border-collapse: collapse; }
+			table#demo td, table#demo th {
+				border: 1px solid #BBB;
+				padding: 4px;
+			}
 		</style>
 	</head>
 	<body>
@@ -77,126 +82,108 @@
 			</tr>
 
 			<tr>
-				<th colspan="3">Lists</th></tr>
+				<th colspan="3">Lists</th>
+			</tr>
 
-				<tr>
-					<th>
-						<img src="../../../images/jstoolbar/bt_ul.png" class="tool" alt="Unordered list" />
-					</th>
-					<td>* Item 1<br />* Item 2</td>
-					<td><ul><li>Item 1</li><li>Item 2</li></ul></td>
-				</tr>
-				<tr>
-					<th>
-						<img src="../../../images/jstoolbar/bt_ol.png" class="tool" alt="Ordered list" />
-					</th>
-					<td># Item 1<br /># Item 2</td>
-					<td><ol><li>Item 1</li><li>Item 2</li></ol></td>
-				</tr>
+			<tr>
+				<th>
+					<img src="../../../images/jstoolbar/bt_ul.png" class="tool" alt="Unordered list" />
+				</th>
+				<td>* Item 1<br />* Item 2</td>
+				<td><ul><li>Item 1</li><li>Item 2</li></ul></td>
+			</tr>
+			<tr>
+				<th>
+					<img src="../../../images/jstoolbar/bt_ol.png" class="tool" alt="Ordered list" />
+				</th>
+				<td># Item 1<br /># Item 2</td>
+				<td><ol><li>Item 1</li><li>Item 2</li></ol></td>
+			</tr>
 
-				<tr>
-					<th colspan="3">Headings</th>
-				</tr>
+			<tr>
+				<th colspan="3">Headings</th>
+			</tr>
 
-				<tr>
-					<th>
-						<img src="../../../images/jstoolbar/bt_h1.png" class="tool" alt="Heading 1" />
-					</th>
-					<td>= Title 1 =</td>
-					<td><h1>Title 1</h1></td>
-				</tr>
-				<tr>
-					<th>
-						<img src="../../../images/jstoolbar/bt_h2.png" class="tool" alt="Heading 2" />
-					</th>
-					<td>== Title 2 ==</td>
-					<td><h2>Title 2</h2></td>
-				</tr>
-				<tr>
-					<th>
-						<img src="../../../images/jstoolbar/bt_h3.png" class="tool" alt="Heading 3" />
-					</th>
-					<td>=== Title 3 ===</td>
-					<td><h3>Title 3</h3></td>
-				</tr>
+			<tr>
+				<th>
+					<img src="../../../images/jstoolbar/bt_h1.png" class="tool" alt="Heading 1" />
+				</th>
+				<td>= Title 1 =</td>
+				<td><h1>Title 1</h1></td>
+			</tr>
+			<tr>
+				<th>
+					<img src="../../../images/jstoolbar/bt_h2.png" class="tool" alt="Heading 2" />
+				</th>
+				<td>== Title 2 ==</td>
+				<td><h2>Title 2</h2></td>
+			</tr>
+			<tr>
+				<th>
+					<img src="../../../images/jstoolbar/bt_h3.png" class="tool" alt="Heading 3" />
+				</th>
+				<td>=== Title 3 ===</td>
+				<td><h3>Title 3</h3></td>
+			</tr>
 
-				<tr>
-					<th colspan="3">External Links</th>
-				</tr>
+			<tr>
+				<th colspan="3">External Links</th>
+			</tr>
 
-				<tr>
-					<th></th>
-					<td>[http://foo.bar Foobar]</td>
-					<td><a href="http://foo.bar">Foobar</a></td>
-				</tr>
-				<tr>
-					<th></th>
-					<td>[http://foo.bar]</td>
-					<td><a href="http://foo.bar">http://foo.bar</a></td>
-				</tr>
-				<tr>
-					<td colspan='3'>
-						Note that bare URLs are automatically converted to links.
-					</td>
-				</tr>
+			<tr>
+				<th></th>
+				<td>[http://foo.bar Foobar]</td>
+				<td><a href="http://foo.bar">Foobar</a></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>[http://foo.bar]</td>
+				<td><a href="http://foo.bar">http://foo.bar</a></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td colspan='2'>
+					Note that bare URLs are automatically converted to links.
+				</td>
+			</tr>
 
-				<tr>
-					<th colspan="3">Redmine links</th>
-				</tr>
+			<tr>
+				<th colspan="3">Internal links</th>
+			</tr>
 
-				<tr>
-					<th>
-						<img src="../../../images/jstoolbar/bt_link.png" class="tool" alt="Link to a Wiki page" />
-					</th>
-					<td>[[Wiki page]]</td>
-					<td><a href="#">Wiki page</a></td>
-				</tr>
-				<tr>
-					<th></th>
-					<td>[[Wiki page|Display name]]</td>
-					<td><a href='#'>Display name</a></td>
-				</tr>
-				<tr>
-					<th></th>
-					<td>Issue #12</td>
-					<td>Issue <a href="#">#12</a></td>
-				</tr>
-				<tr>
-					<th></th>
-					<td>Revision r43</td>
-					<td>Revision <a href="#">r43</a></td>
-				</tr>
-				<tr>
-					<th></th>
-					<td>source:some/file</td>
-					<td><a href="#">some/file</a></td>
-				</tr>
-				<tr>
-					<th></th>
-					<td>message:3</td>
-					<td><a href='#'>&lt;forum message #3's title&gt;</a></td>
-				</tr>
+			<tr>
+				<th>
+					<img src="../../../images/jstoolbar/bt_link.png" class="tool" alt="Link to a Wiki page" />
+				</th>
+				<td>[[Wiki page]]</td>
+				<td><a href="#">Wiki page</a></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>[[Wiki page|Display name]]</td>
+				<td><a href='#'>Display name</a></td>
+			</tr>
 
-				<tr>
-					<th colspan="3">Inline images</th>
-				</tr>
+			<tr>
+				<th colspan="3">Inline images</th>
+			</tr>
 
-				<tr>
-					<th>
-						<img src="../../../images/jstoolbar/bt_img.png" class="tool" alt="Image" />
-					</th>
-					<td>[[Image:<kbd>image_url</kbd>|<kbd>alt text</kbd>]]</td>
-					<td></td>
-				</tr>
+			<tr>
+				<th>
+					<img src="../../../images/jstoolbar/bt_img.png" class="tool" alt="Image" />
+				</th>
+				<td>[[Image:<kbd>image_url</kbd>|<kbd>alt text</kbd>]]</td>
+				<td></td>
+			</tr>
 
-				<tr>
-					<th colspan='3'>Tables</th>
-				</tr>
+			<tr>
+				<th colspan='3'>Tables</th>
+			</tr>
 
-				<tr>
-					<th></th>
-					<td>
-						<pre>
+			<tr>
+				<th></th>
+				<td>
+					<pre>
 {|
 ! Heading 1
 ! Heading 2
@@ -207,26 +194,95 @@
 | Row 2, col 1
 | Row 2, col 2
 |}
-						</pre>
-					</td>
-					<td>
-						<table>
-							<tr>
-								<th>Heading 1</th>
-								<th>Heading 2</th>
-							</tr>
-							<tr>
-								<td>Row 1, col 1</td>
-								<td>Row 1, col 2</td>
-							</tr>
-							<tr>
-								<td>Row 2, col 1</td>
-								<td>Row 2, col 2</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-						
+					</pre>
+				</td>
+				<td>
+					<table id='demo'>
+						<tr>
+							<th>Heading 1</th>
+							<th>Heading 2</th>
+						</tr>
+						<tr>
+							<td>Row 1, col 1</td>
+							<td>Row 1, col 2</td>
+						</tr>
+						<tr>
+							<td>Row 2, col 1</td>
+							<td>Row 2, col 2</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+
+			<tr>
+				<th colspan='3'>Redmine links</th>
+			</tr>
+
+			<tr>
+				<th></th>
+				<td>Issue #12</td>
+				<td>Issue <a href='#'>12</a></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>Revision r43</td>
+				<td>Revision <a href="#">r43</a></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>source:some/file</td>
+				<td><a href="#">source:some/file</a></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>source:some/file@3</td>
+				<td><a href='#'>source:some/file@3</a> (in revision 3)</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>source:some/file#L42</td>
+				<td><a href='#'>source:some/file#L42</a> (jump to line 42)</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>source:some/file@3#L42</td>
+				<td><a href='#'>source:some/file@3#L42</a> (jump to line 42 in revision 3)</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>export:some/file</td>
+				<td><a href='#'>export:some/file</a> (for download)</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>attachment:filename.ext</td>
+				<td><a href='#'>filename.ext</a> (attachment of current page)
+			</tr>
+			<tr>
+				<th></td>
+				<td>document#2</td>
+				<td><a href='#'>&lt;document ID #2's title&gt;</a></td>
+			</tr>
+			<tr>
+				<th></td>
+				<td>document:"Document name"</td>
+				<td><a href='#'>Document name</a></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>message#2</td>
+				<td>&lt;forum message #2's title&gt;</td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>version#3</td>
+				<td><a href='#'>&lt;version ID #2's name&gt;</a></td>
+			</tr>
+			<tr>
+				<th></th>
+				<td>version:1.3</td>
+				<td><a href='#'>1.3</a></td>
+			</tr>						
 		</table>
 
 		<p>
