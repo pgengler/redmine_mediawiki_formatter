@@ -22,7 +22,13 @@ module RedmineMediawikiFormatter
 	# For example, [[Image:image_url]]. For now, this only handles
 	# Image: links (including 'alt' text), returning an HTML string
 	# with the <img> tag.
+	# The 'url_for' method is also overridden to simply return the link
+	# target.
 	class RedmineMediaWikiLinkHandler < MediaWikiHTMLGenerator::MediaWikiLinkHandler
+		def url_for(resource)
+			return resource
+		end
+
 		def link_for(prefix, resource, options=[])
 			if prefix == 'Image':
 				alt = '';
