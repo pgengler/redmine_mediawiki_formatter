@@ -6,7 +6,7 @@ module RedmineMediawikiFormatter
 			file = Engines::RailsExtensions::AssetHelpers.plugin_asset_path('redmine_mediawiki_formatter', 'help', 'mediawiki_syntax.html')
 			help_link = l(:setting_text_formatting) + ': ' +
 				link_to(
-					l(:label_help), file, :onclick => "window.open(\"#{file}\", \"\", \"resizable=yes, location=no, width=300, height=640, menubar=no, status=no, scrollbars=yes\"); return false;"
+					l(:label_help), file, :onclick => "window.open(\"#{file}\", \"\", \"resizable=yes, location=no, width=600, height=640, menubar=no, status=no, scrollbars=yes\"); return false;"
 				)
  				javascript_include_tag('jstoolbar/jstoolbar') +
 				javascript_include_tag('mediawiki', :plugin => 'redmine_mediawiki_formatter') +
