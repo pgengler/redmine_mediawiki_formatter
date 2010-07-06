@@ -1,0 +1,32 @@
+REDMINE MEDIAWIKI FORMATTER
+(c) 2010 Phil Gengler
+
+WHAT IS THIS?
+-------------
+This is a Redmine plugin that adds Mediawiki syntax as a wiki format.
+Mediawiki is the engine that powers sites like Wikipedia, so the syntax may
+already be familiar to a number of users.
+
+HOW DO I USE THIS?
+------------------
+You will need to have the 'mediacloth' Ruby gem installed; this gem handles
+the actual parsing.
+
+Then:
+(1) Copy the plugin directory into the Redmine vendor/plugins/ directory
+(2) Start/restart Redmine
+(3) In Redmine, go to "Administration" and choose "Settings"
+(4) Change the value of the "Text formatting" dropdown to "mediawiki"
+
+CREDITS
+-------
+* Larry Baltz, whose redmine_markdown_formatter plugin was the inspiration to
+  create this, and who credited:
+* Yuki Sonoda (http://github.com/yugui) did the real work by creating the
+  redmine_rd_formatter
+* Jean-Philippe Lang for making the change to RedMine (based on Yuki's patch) to
+  allow pluggable formatters
+
+FUTURE PLANS
+------------
+* Gracefully handle parse errors
